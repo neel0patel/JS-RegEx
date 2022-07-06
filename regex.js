@@ -14,7 +14,7 @@ email: lsouza@gmail.com
 animals: Dog, cat
 bio: Cat ipsum dolor sit amet, exercitationem incididunt. Laborum consequuntur, error velitesse incidunt. Nostrud fugit eu, anim. Sint qui but exercitationem iure yet nesciunt. Occaecat do so ut yet nihil. Fugiat fugiat but voluptatem or velit, for aut. 
 status: Approved 
-`
+`;
 
 /* 
 
@@ -29,9 +29,11 @@ numbers if there are more than one
 Expected Output: 
 ["555-123-4567", "555-567-8910"]
 
-*/ 
- 
-let phoneReg = /write your regex here/
+*/
+
+let phoneReg = /\d{3}-\d{3}-\d{4}/g;
+let phoneArray = sampleApp.match(phoneReg);
+console.log(phoneArray);
 
 /* 
 
@@ -49,9 +51,11 @@ Expected Output:
 ["lsouza@gmail.com"]
 - Note: Your terminal might also display the index, input, and groups of the match. If so, that's okay!
 
-*/ 
+*/
 
-let emailReg = /write your regex here/
+let emailReg = /\w+@[a-zA-Z]+.[a-zA-Z]+/;
+let emailArray = sampleApp.match(emailArray);
+console.log(emailArray);
 
 /* 
 
@@ -65,6 +69,8 @@ Regular Expression 3:
 Expected Output: 
 365
 
-*/ 
+*/
 
-let statusReg = /write your regex here/
+let statusReg = /status:/i;
+let statusArray = sampleApp.search(statusReg);
+console.log(statusArray);
